@@ -1,6 +1,5 @@
 .idea/
 bower_components/
-build/
 .vscode/
 node_modules/
 zip/
