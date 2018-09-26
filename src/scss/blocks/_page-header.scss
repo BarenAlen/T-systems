@@ -1,0 +1,15 @@
+.page-header {
+    transition: background-color .7s;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    &--bg {
+        background-color: #0f151a;
+        box-shadow: 0 2px 12px 1px rgba(#000, .7);
+    }
+}

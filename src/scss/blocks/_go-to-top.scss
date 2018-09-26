@@ -1,0 +1,37 @@
+.go-to-top {
+    width: 26px;
+    padding: 2px 22px 2px 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center right;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+
+    &::after {
+        @include sprite("go-to-top");
+        height: 22px;
+        content: "";
+        position: absolute;
+        top: -57px;
+        left: 2px;
+    }
+
+    &::before {
+        content: "Наверх";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transform: rotate(-90deg);
+    }
+
+    @include breakpoint('min', $bp-md) {
+        &::before {
+            font-size: 1.125rem;
+        }
+    }
+
+}

@@ -1,4 +1,65 @@
-$sprites: ();
+$sprites: (
+	"go-to-top": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 22,
+			height: 12,
+			image: "sprites.png",
+			total_width: 35,
+			total_height: 33,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 44,
+			height: 24,
+			image: "sprites@2x.png",
+			total_width: 70,
+			total_height: 66,
+		),
+	),
+	"hero-carousel-next": (
+		normal: (
+			x: 0,
+			y: 14,
+			width: 11,
+			height: 19,
+			image: "sprites.png",
+			total_width: 35,
+			total_height: 33,
+		),
+		retina: (
+			x: 0,
+			y: 28,
+			width: 22,
+			height: 38,
+			image: "sprites@2x.png",
+			total_width: 70,
+			total_height: 66,
+		),
+	),
+	"hero-carousel-prev": (
+		normal: (
+			x: 24,
+			y: 0,
+			width: 11,
+			height: 19,
+			image: "sprites.png",
+			total_width: 35,
+			total_height: 33,
+		),
+		retina: (
+			x: 48,
+			y: 0,
+			width: 22,
+			height: 38,
+			image: "sprites@2x.png",
+			total_width: 70,
+			total_height: 66,
+		),
+	),
+);
 
 @each $name in map-keys($sprites) {
 	.sprite-#{$name} {

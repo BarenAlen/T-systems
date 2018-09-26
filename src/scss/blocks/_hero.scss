@@ -1,0 +1,44 @@
+.hero {
+    height: 560px;
+    padding: 220px 0 60px;
+    overflow: hidden;
+    background-position: top center;
+    background-size: cover;
+
+    // display: flex;
+
+    // .container {
+    //     align-self: center;
+    // }
+
+    &--bg-spaceship-1 {
+        background-image: url("../images/hero-bg-spaceship-1.jpg")
+    }
+
+    &--bg-spaceship-2 {
+        background-image: url("../images/hero-bg-spaceship-2.jpg")
+    }
+
+    &__container {
+        max-width: 320px;
+    }
+
+    &__title,
+    &__text {
+        color: #fff;
+    }
+
+    &__text {
+        font-size: 1rem;
+    }
+
+    @include breakpoint('min', $bp-md) {
+        height: 640px;
+        padding-top: 260px;
+    }
+
+    @include breakpoint('min', $bp-lg) {
+        height: 790px;
+        padding: 326px 0 100px;
+    }
+}

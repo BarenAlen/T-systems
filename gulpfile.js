@@ -464,7 +464,7 @@ gulp.task('build', gulp.parallel(
 	'images',
 	'pngSprites',
 	'svgSprites',
-	'pug',
+	// 'pug',
 	'scss',
 	'js'
 ));

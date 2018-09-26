@@ -1,0 +1,49 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        &.active {
+            .nav__link {
+                color: #fff;
+                position: relative;
+                border-bottom: 1px solid $color-accent;
+            }
+        }
+    }
+
+    &__link {
+        padding: 0 5px;
+        display: block;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgba(255,255,255,.4);
+        transition: color .2s;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    @include breakpoint('min', $bp-md) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        &__item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &__link {
+            height: $navbar-height;
+            line-height: $navbar-height;
+        }
+    }
+}

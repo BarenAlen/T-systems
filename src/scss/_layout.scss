@@ -1,0 +1,11 @@
+.page-table {
+    margin: 54px 0 44px;
+
+    @include breakpoint('min', $bp-lg) {
+        margin: 112px 0 94px;
+
+        &__title {
+            margin-bottom: 1.75rem;
+        }
+    }
+}

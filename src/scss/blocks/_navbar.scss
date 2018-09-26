@@ -1,0 +1,93 @@
+.navbar {
+    line-height: $navbar-height;
+    height: $navbar-height;
+    position: relative;
+    padding: 0 10px;
+
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(#fff, .4);
+    }
+
+
+    &__toggler {
+        line-height: $navbar-height;
+        height: $navbar-height;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: transparent;
+        border: 0;
+
+        span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: #fff;
+
+            &:first-child {
+                width: 40px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__brand {
+        line-height: $navbar-height;
+        height: $navbar-height;
+    }
+
+    @include breakpoint('max', 767px) {
+
+        &__collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #0f151a;
+            display: none;
+            box-shadow: 0 2px 12px 0 rgba(#000, .7);
+        }
+
+        &__toggler {
+            margin-right: 15px;
+        }
+
+        &__brand {
+            margin-right: auto;
+        }
+    }
+
+    @include breakpoint('min', $bp-md) {
+        .lang-menu {
+            margin-right: 50px;
+        }
+
+        &__toggler,
+        &__brand {
+            margin-right: 15px;
+        }
+
+        &__collapse {
+            flex-grow: 1;
+            max-width: 440px;
+            margin-right: 0;
+            margin-left: auto;
+            display: block !important;
+        }
+    }
+
+    @include breakpoint('min', $bp-lg) {
+        &__toggler {
+            margin-right: 28px;
+        }
+
+        &__brand {
+            margin-right: 35px;
+        }
+    }
+}

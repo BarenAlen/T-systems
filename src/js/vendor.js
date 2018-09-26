@@ -7,4 +7,6 @@ svg4everybody();
 window.$ = $;
 window.jQuery = $;
 
+require('owl.carousel');
+
 require('ninelines-ua-parser');

@@ -1,0 +1,13 @@
+.page-footer {
+    padding: 45px 0 40px;
+    margin-top: 55px;
+
+    &__container {
+        padding: 0 10px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1220px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

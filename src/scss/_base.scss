@@ -7,3 +7,70 @@
 html {
 	box-sizing: border-box;
 }
+
+body {
+	font-family: $font-family-roboto, sans-serif;
+	color: #000;
+	background: #fff;
+}
+
+h2 {
+	font-size: 1.875rem;
+	font-weight: 500;
+	line-height: 1.36;
+	margin: 1rem 0;
+}
+
+p {
+	font-weight: 300;
+	line-height: 1.6;
+
+	@include breakpoint('min', $bp-md) {
+		font-size: 1.125rem;
+	}
+}
+
+a {
+	color: $color-accent;
+
+	&:hover {
+		color: darken($color-accent, 20%);
+		text-decoration: none;
+	}
+}
+
+.logo {
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 1.25rem;
+	color: #000;
+
+	&:hover {
+		color: #000;
+	}
+
+	span {
+		font-weight: 500;
+	}
+
+	&--white {
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	@include breakpoint('max', $bp-sm) {
+		font-size: 0.875rem;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 820px;
+	padding: 0 10px;
+	margin: 0 auto;
+}

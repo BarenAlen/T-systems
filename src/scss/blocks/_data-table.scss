@@ -1,0 +1,127 @@
+.data-table {
+    width: 100%;
+
+    tr {
+        position: relative;
+        border-radius: 2px;
+        transition: box-shadow .3s;
+
+        &:not(:nth-child(-n+2)) {
+            th,
+            td {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    border-top: 1px solid #000;
+                    transition: opacity .3s;
+                }
+            }
+        }
+
+        &:first-child th {
+            font-weight: 400;
+            font-size: 1.125rem;
+            white-space: nowrap;
+            padding-top: 24px;
+            padding-bottom: 18px;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-bottom: 2px solid $color-accent;
+            }
+        }
+
+        &:not(:first-child) {
+            td:last-child {
+                text-align: right;
+            }
+            &:hover {
+                box-shadow: 1px 0 5px 1px rgba($color-light-grey, .8);
+                th,
+                td,
+                & + tr th,
+                & + tr td {
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+
+                .data-table__link {
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: left;
+        font-weight: 300;
+    }
+
+    td {
+        font-weight: 300;
+    }
+
+    th,
+    td {
+        vertical-align: top;
+        position: relative;
+        padding: 22px 10px 15px;
+        line-height: 1.7;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+    }
+
+    @include breakpoint('max', $bp-lg) {
+        overflow-x: auto;
+        display: block;
+    }
+
+    @include breakpoint('min', $bp-lg) {
+        td,
+        th {
+            padding: 33px 10px 25px;
+            &:first-child {
+                padding-left: 45px;
+
+                &::after {
+                    left: 45px !important;
+                }
+            }
+
+            &:last-child {
+                padding-right: 45px;
+
+                &::after {
+                    right: 45px !important;
+                }
+            }
+        }
+
+        &-wrap {
+            margin-right: -45px;
+            margin-left: -45px;
+        }
+    }
+}

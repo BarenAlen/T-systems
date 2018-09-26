@@ -1,0 +1,41 @@
+.hero-carousel {
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    &-prev,
+    &-next {
+        background-color: transparent;
+        border: 0;
+        font-size: 0;
+    }
+
+    &-prev {
+        @include sprite("hero-carousel-prev");
+        margin-right: 20px;
+    }
+
+    &-next {
+        @include sprite("hero-carousel-next");
+    }
+
+    .owl-nav {
+        margin: 0 auto;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 820px;
+        position: absolute;
+        bottom: 66px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint('max', $bp-md) {
+        .owl-nav {
+            bottom: 30px;
+        }
+    }
+
+    @include breakpoint('min', $bp-md) {
+        margin-bottom: 105px;
+    }
+}
